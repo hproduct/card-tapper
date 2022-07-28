@@ -1,0 +1,95 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --grey: #6b7280;
+  --pink: #ec4899;
+  --purple: #f5c9f0;
+  --light: #eee;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
+  background-image: url("../../assets//image/background.png");
+  
+}
+
+main {
+  width: 25%;
+  height: auto;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Header {
+  width: 80%;
+  height: auto;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  margin-top: 2%;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1%;
+}
+
+.Image {
+  width: 10%;
+  height: 100px;
+  border-radius: 3rem;
+  justify-content: center;
+}
+
+.Name {
+  height: auto;
+  color: #41784f;
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: -1.5rem;
+}
+
+.Biography {
+  height: auto;
+  color: #41784f;
+  text-align: center;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.Avatar {
+  height: auto;
+  text-align: center;
+  margin-bottom: -1rem;
+}
+
+.social-platform-list {
+  display: flex;
+  border: 1px solid #41784f;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem ;
+}
+
+.icon {
+  width: 5%;
+  height: auto;
+  margin-right: 5%;
+}
+
+.title {
+  height: auto;
+  color: #41784f;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 50%) {
+  main {
+    background-color: lightblue;
+  }
+}

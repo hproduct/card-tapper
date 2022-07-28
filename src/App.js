@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
-import Home from './pages/Home/home'
+import {ViewCard} from './pages/ViewCard/viewCard'
 
 function App() {
   return (
-    <div>Hello</div>
+    <ViewCard />
   );
 }
 
