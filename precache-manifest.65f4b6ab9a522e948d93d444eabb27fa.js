@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "add0ae8f161875a55173",
-    "url": "/card-tapper/static/css/main.b9a4ccc6.chunk.css"
+    "revision": "700d613d554c16091e0d",
+    "url": "/card-tapper/static/css/main.7006bb87.chunk.css"
   },
   {
-    "revision": "add0ae8f161875a55173",
-    "url": "/card-tapper/static/js/main.add0ae8f.chunk.js"
+    "revision": "700d613d554c16091e0d",
+    "url": "/card-tapper/static/js/main.700d613d.chunk.js"
   },
   {
     "revision": "97af9aaba510c3e4c76e",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/card-tapper/static/media/background.a7e0e82a.png"
   },
   {
-    "revision": "43df9a9d63e8928c3aee27d1032d3cb9",
+    "revision": "800f45ebbe465a71649867cfa8641636",
     "url": "/card-tapper/index.html"
   }
 ];

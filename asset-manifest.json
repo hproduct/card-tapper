@@ -1,7 +1,7 @@
 {
-  "main.css": "/card-tapper/static/css/main.b9a4ccc6.chunk.css",
-  "main.js": "/card-tapper/static/js/main.add0ae8f.chunk.js",
-  "main.js.map": "/card-tapper/static/js/main.add0ae8f.chunk.js.map",
+  "main.css": "/card-tapper/static/css/main.7006bb87.chunk.css",
+  "main.js": "/card-tapper/static/js/main.700d613d.chunk.js",
+  "main.js.map": "/card-tapper/static/js/main.700d613d.chunk.js.map",
   "static/js/1.97af9aab.chunk.js": "/card-tapper/static/js/1.97af9aab.chunk.js",
   "static/js/1.97af9aab.chunk.js.map": "/card-tapper/static/js/1.97af9aab.chunk.js.map",
   "static/js/2.b8fc2209.chunk.js": "/card-tapper/static/js/2.b8fc2209.chunk.js",
@@ -10,8 +10,8 @@
   "runtime~main.js.map": "/card-tapper/static/js/runtime~main.54fe0197.js.map",
   "static/media/avatar.png": "/card-tapper/static/media/avatar.905153e9.png",
   "static/media/styles.css": "/card-tapper/static/media/background.a7e0e82a.png",
-  "static/css/main.b9a4ccc6.chunk.css.map": "/card-tapper/static/css/main.b9a4ccc6.chunk.css.map",
+  "static/css/main.7006bb87.chunk.css.map": "/card-tapper/static/css/main.7006bb87.chunk.css.map",
   "index.html": "/card-tapper/index.html",
-  "precache-manifest.2314db147bd851a058bf1dddb197159c.js": "/card-tapper/precache-manifest.2314db147bd851a058bf1dddb197159c.js",
+  "precache-manifest.65f4b6ab9a522e948d93d444eabb27fa.js": "/card-tapper/precache-manifest.65f4b6ab9a522e948d93d444eabb27fa.js",
   "service-worker.js": "/card-tapper/service-worker.js"
 }
