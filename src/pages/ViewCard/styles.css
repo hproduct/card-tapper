@@ -14,37 +14,27 @@ body {
   min-height: 100vh;
   color: #fff;
   background-image: url("../../assets//image/background.png");
-  
-}
-
-main {
-  width: 25%;
-  height: auto;
-  /* border: 1px solid black; */
-  margin: 0 auto;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .Header {
-  width: 80%;
+  width: 100%;
   height: auto;
-  /* border: 1px solid black; */
-  margin: 0 auto;
+
   margin-top: 2%;
-  flex-direction: column;
-  justify-content: center;
   padding-top: 1%;
 }
 
 .Image {
-  width: 10%;
-  height: 100px;
-  border-radius: 3rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
   justify-content: center;
 }
 
 .Name {
+  margin-top: 2%;
   height: auto;
   color: #41784f;
   text-align: center;
@@ -54,42 +44,79 @@ main {
 }
 
 .Biography {
+  margin-top: 2%;
   height: auto;
   color: #41784f;
   text-align: center;
   font-weight: bold;
   font-size: medium;
+  vertical-align: bottom;
+  width: 100%;
 }
 
 .Avatar {
-  height: auto;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
   text-align: center;
   margin-bottom: -1rem;
 }
 
 .social-platform-list {
-  display: flex;
   border: 1px solid #41784f;
   padding: 1rem;
   border-radius: 2rem;
   margin-bottom: 1rem;
-  padding-top: 1rem ;
+  padding-top: 1rem;
 }
 
 .icon {
-  width: 5%;
-  height: auto;
-  margin-right: 5%;
+  height: 100%;
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
-  height: auto;
+  width: auto;
+  height: 100%;
   color: #41784f;
   font-weight: bold;
+  display: inline-block;
+  margin: 0 auto;
 }
 
-@media only screen and (max-width: 50%) {
-  main {
-    background-color: lightblue;
+.url {
+  text-decoration: none;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Body {
+  width: 40%;
+  height: auto;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+  width: 25px ;
+}
+
+
+/* Mobile: width < 714px */
+@media only screen and (max-width: 44.625rem) {
+  .Body {
+    width: 70%;
   }
+
+
 }

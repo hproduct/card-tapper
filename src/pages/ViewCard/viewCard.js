@@ -1,43 +1,119 @@
 import React from "react";
 import styles from "./styles.css";
-import avatar from '../../../src/assets/image/avatar.png'
-import { FaFacebook, FaInstagram, FaMailBulk , FaPhone, FaTiktok } from "react-icons/fa";
+import avatar from "../../../src/assets/image/avatar.png";
+import {
+  FaFacebook,
+  FaGit,
+  FaGlobe,
+  FaInstagram,
+  FaMailBulk,
+  FaPhone,
+  FaTiktok,
+  FaWeebly,
+} from "react-icons/fa";
 export function ViewCard() {
   return (
     <body>
-      <header className="Header">
-            <div className="Avatar">
-                <img  src={avatar}  className="Image"/>   
+      <div className="Header">
+        <div className="Avatar">
+          <img src={avatar} className="Image" />
+        </div>
+        <div className="Name">
+          <p>Lê Sơn Hải</p>
+        </div>
+        <div className="Biography">
+          <h3>
+            Tôi là một Android Developer
+            <br></br>
+            Tôi thích chơi game
+            <br></br>
+            Tôi yêu động vật
+          </h3>
+        </div>
+      </div>
+      <div className="Body">
+        <a
+          href="https://www.facebook.com/profile.php?id=100006584739365"
+          className="url"
+        >
+          <div className="social-platform-list">
+            <div className="link">
+              <div className="icon">
+                <FaFacebook size="26px" color="#41784f" />
+              </div>
+              <div className="title">Sơn Hải</div>
+              <div className="icon">
+                <FaFacebook size="26px" color="#41784f" />
+              </div>
             </div>
-            <div className="Name">
-                <p>Lê Sơn Hải</p>
-            </div> 
-            <div className="Biography">
-                <h3>Tôi là một android developer</h3>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/hhaiiro/" className="url">
+          <div className="social-platform-list">
+            <div className="link">
+              <div className="icon">
+                <FaInstagram size="26px" color="#41784f" />
+              </div>
+              <div className="title">@hhaiiro</div>
+              <div className="icon">
+                <FaInstagram size="26px" color="#41784f" />
+              </div>
             </div>
-      </header>
-      <main>
-        <section className="social-platform-list">
-          <div className="icon"><FaFacebook color="#41784f"/></div>
-          <div className="title">Sơn Hải</div>
-        </section>
-        <section className="social-platform-list">
-          <div className="icon"><FaInstagram color="#41784f"/></div>
-          <div className="title">@hirohai</div>
-        </section>
-        <section className="social-platform-list">
-          <div className="icon"><FaMailBulk color="#41784f"/></div>
-          <div className="title">sonhai@gmail.com</div>
-        </section>
-        <section className="social-platform-list">
-          <div className="icon"><FaPhone color="#41784f"/></div>
-          <div className="title">0969790938</div>
-        </section>
-        <section className="social-platform-list">
-          <div className="icon"><FaTiktok color="#41784f"/></div>
-          <div className="title">@haitiktoker</div>
-        </section>
-      </main>
+          </div>
+        </a>
+        <a href="" className="url">
+          <div className="social-platform-list">
+            <div className="link">
+              <div className="icon">
+                <FaMailBulk size="26px" color="#41784f" />
+              </div>
+              <div className="title">sonhai@gmail.com</div>
+              <div className="icon">
+                <FaMailBulk size="26px" color="#41784f" />
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="tel:0969790939" className="url">
+          <div className="social-platform-list">
+            <div className="link">
+              <div className="icon">
+                <FaPhone size="26px" color="#41784f" />
+              </div>
+              <div className="title">0969790938</div>
+              <div className="icon">
+                <FaPhone size="26px" color="#41784f" />
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://github.com/hai1411" className="url">
+          <div className="social-platform-list">
+            <div className="link">
+              <div className="icon">
+                <FaGit size="26px" color="#41784f" />
+              </div>
+              <div className="title">hai1411</div>
+              <div className="icon">
+                <FaGit size="26px" color="#41784f" />
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://codelearn.io/profile/988444" className="url">
+          <div className="social-platform-list">
+            <div className="link">
+              <div className="icon">
+                <FaGlobe size="26px" color="#41784f" />
+              </div>
+              <div className="title">Son Hai</div>
+              <div className="icon">
+                <FaGlobe size="26px" color="#41784f" />
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </body>
   );
 }
