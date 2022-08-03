@@ -14,6 +14,7 @@ import {
 export function ViewCard() {
   return (
     <body>
+      <title>Hai</title>
       <div className="Header">
         <div className="Avatar">
           <img src={avatar} className="Image" />
