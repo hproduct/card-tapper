@@ -35,7 +35,7 @@ body {
 }
 
 .Name {
-  margin-top: 5%;
+  margin-top: 40px;
   height: auto;
   color: #41784f;
   text-align: center;
@@ -45,7 +45,7 @@ body {
 }
 
 .Biography {
-  margin-top: 2%;
+  margin-top: 40px;
   height: auto;
   color: #41784f;
   text-align: center;
@@ -111,13 +111,10 @@ body {
   width: 25px ;
 }
 
-
 /* Mobile: width < 714px */
 @media only screen and (max-width: 44.625rem) {
   .Body {
     width: 80%;
-    height: auto;
+    height: 100%;
   }
-
-
 }
