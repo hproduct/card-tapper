@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/card-tapper/precache-manifest.7fec3ec57312c82f0eccb65e882492c5.js"
+  "/card-tapper/precache-manifest.2314db147bd851a058bf1dddb197159c.js"
 );
 
 workbox.clientsClaim();
