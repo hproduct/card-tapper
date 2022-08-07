@@ -8,8 +8,6 @@ import {
   FaInstagram,
   FaMailBulk,
   FaPhone,
-  FaTiktok,
-  FaWeebly,
 } from "react-icons/fa";
 export function ViewCard() {
   return (
@@ -17,7 +15,7 @@ export function ViewCard() {
       <title>Hai</title>
       <div className="Header">
         <div className="Avatar">
-          <img src={avatar} className="Image" />
+          <img src={avatar} className="Image" alt="" />
         </div>
         <div className="Name">
           <p>Lê Sơn Hải</p>
@@ -62,7 +60,7 @@ export function ViewCard() {
             </div>
           </div>
         </a>
-        <a href="" className="url">
+        <a href="www.google.com" className="url">
           <div className="social-platform-list">
             <div className="link">
               <div className="icon">
@@ -75,7 +73,7 @@ export function ViewCard() {
             </div>
           </div>
         </a>
-        <a href="tel:0969790939" className="url">
+        <a href="tel:0969790938" className="url">
           <div className="social-platform-list">
             <div className="link">
               <div className="icon">
