@@ -1,120 +1,92 @@
-import React from "react";
-import styles from "./styles.css";
-import avatar from "../../../src/assets/image/avatar.png";
-import {
-  FaFacebook,
-  FaGit,
-  FaGlobe,
-  FaInstagram,
-  FaMailBulk,
-  FaPhone,
-} from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import {} from "./styles.css";
+import DynamicFaIcon from "./DynamicFaIcon"
+import { db } from "./firebase-config";
+import { doc, getDoc } from "firebase/firestore";
+import { Loading } from "../Loading/loading";
+
 export function ViewCard() {
-  return (
-    <body>
-      <title>Hai</title>
-      <div className="Header">
-        <div className="Avatar">
-          <img src={avatar} className="Image" alt="" />
+  const urlParams = new URLSearchParams(window.location.search);
+  let code = urlParams.get("user");
+
+  console.log(code);
+
+  const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState({
+    links: [],
+    background: {
+      text: "white",
+      type: "Color",
+    },
+  });
+
+  useEffect(() => {
+    const getUserByID = async () => {
+      setLoading(true);
+      const docRef = doc(db, "users", "hirohai");
+      getDoc(docRef).then((doc) => {
+        const data = doc.data();
+        setUser({
+          links: [...data.Links],
+          description: data.description,
+          name: data.name,
+          themeColor: data.themeColor,
+          avatar: data.avatar,
+          background: data.background,
+        });
+        setLoading(false);
+      });
+    };
+    getUserByID();
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  } else {
+    return (
+      <body
+        style={
+          user.background.type === "Color"
+            ? { backgroundColor: user.background.text }
+            : { backgroundImage: `url(${user.background.text})` }
+        }
+      >
+        <div className="Header">
+          <div className="Avatar">
+            <img src={user.avatar} className="Image" alt="" />
+          </div>
+          <div className="Name" style={{ color: user.themeColor }}>
+            <p>{user.name}</p>
+          </div>
+          <div className="Biography" style={{ color: user.themeColor }}>
+            <h3>{user.description}</h3>
+          </div>
         </div>
-        <div className="Name">
-          <p>Lê Sơn Hải</p>
+        <div className="Body">
+          {user.links.map((item) => {
+            return (
+              <a href={item.link} className="url">
+                <div
+                  className="social-platform-list"
+                  style={{ border: "1px solid #41784f" }}
+                >
+                  <div className="link">
+                    <div className="icon">
+                      <DynamicFaIcon name = {`Fa${user.icon}`} themeColor = {user.themeColor}/>
+                    </div>
+                    <div className="title">{item.content}</div>
+                    <div className="icon">
+                      <DynamicFaIcon name = "FaFacebook" themeColor = {user.themeColor}/>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
         </div>
-        <div className="Biography">
-          <h3>
-            Tôi là một Android Developer
-            <br></br>
-            Tôi thích chơi game
-            <br></br>
-            Tôi yêu động vật
-          </h3>
-        </div>
-      </div>
-      <div className="Body">
-        <a
-          href="https://www.facebook.com/profile.php?id=100006584739365"
-          className="url"
-        >
-          <div className="social-platform-list">
-            <div className="link">
-              <div className="icon">
-                <FaFacebook size="26px" color="#41784f" />
-              </div>
-              <div className="title">Sơn Hải</div>
-              <div className="icon">
-                <FaFacebook size="26px" color="#41784f" />
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="https://www.instagram.com/hhaiiro/" className="url">
-          <div className="social-platform-list">
-            <div className="link">
-              <div className="icon">
-                <FaInstagram size="26px" color="#41784f" />
-              </div>
-              <div className="title">@hhaiiro</div>
-              <div className="icon">
-                <FaInstagram size="26px" color="#41784f" />
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="www.google.com" className="url">
-          <div className="social-platform-list">
-            <div className="link">
-              <div className="icon">
-                <FaMailBulk size="26px" color="#41784f" />
-              </div>
-              <div className="title">sonhai@gmail.com</div>
-              <div className="icon">
-                <FaMailBulk size="26px" color="#41784f" />
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="tel:0969790938" className="url">
-          <div className="social-platform-list">
-            <div className="link">
-              <div className="icon">
-                <FaPhone size="26px" color="#41784f" />
-              </div>
-              <div className="title">0969790938</div>
-              <div className="icon">
-                <FaPhone size="26px" color="#41784f" />
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="https://github.com/hai1411" className="url">
-          <div className="social-platform-list">
-            <div className="link">
-              <div className="icon">
-                <FaGit size="26px" color="#41784f" />
-              </div>
-              <div className="title">hai1411</div>
-              <div className="icon">
-                <FaGit size="26px" color="#41784f" />
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="https://codelearn.io/profile/988444" className="url">
-          <div className="social-platform-list">
-            <div className="link">
-              <div className="icon">
-                <FaGlobe size="26px" color="#41784f" />
-              </div>
-              <div className="title">Son Hai</div>
-              <div className="icon">
-                <FaGlobe size="26px" color="#41784f" />
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </body>
-  );
+      </body>
+    );
+  }
 }
 
 export default ViewCard;
