@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import {} from "./styles.css";
-import DynamicFaIcon from "./DynamicFaIcon"
+import DynamicFaIcon from "./DynamicFaIcon";
+import { Error } from "../Error/error";
 import { db } from "./firebase-config";
 import { doc, getDoc } from "firebase/firestore";
 import { Loading } from "../Loading/loading";
 
 export function ViewCard() {
-  const urlParams = new URLSearchParams(window.location.search);
-  let code = urlParams.get("user");
-
-  console.log(code);
-
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [user, setUser] = useState({
     links: [],
     background: {
@@ -23,32 +20,59 @@ export function ViewCard() {
   useEffect(() => {
     const getUserByID = async () => {
       setLoading(true);
-      const docRef = doc(db, "users", "hirohai");
-      getDoc(docRef).then((doc) => {
-        const data = doc.data();
-        setUser({
-          links: [...data.Links],
-          description: data.description,
-          name: data.name,
-          themeColor: data.themeColor,
-          avatar: data.avatar,
-          background: data.background,
-        });
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        let userName = urlParams.get("user");
+        const docRef = doc(db, "users", userName);
+        getDoc(docRef)
+          .then((doc) => {
+            const data = doc.data();
+            setUser({
+              links: [...data.Links],
+              description: data.description,
+              name: data.name,
+              themeColor: data.themeColor,
+              avatar: data.avatar,
+              background: data.background,
+            });
+            setLoading(false);
+          })
+          .catch((err) => {
+            setError(true);
+            setLoading(false);
+          });
+      } catch (e) {
+        setError(true);
         setLoading(false);
-      });
+      }
     };
     getUserByID();
   }, []);
 
   if (loading) {
     return <Loading />;
+  } else if (error) {
+    return <Error />;
   } else {
     return (
-      <body
+      <div
         style={
           user.background.type === "Color"
-            ? { backgroundColor: user.background.text }
-            : { backgroundImage: `url(${user.background.text})` }
+            ? {
+                backgroundColor: user.background.text,
+                display: "flex ",
+                flexDirection: "column",
+                height: "100vh",
+              }
+            : {
+                backgroundImage: `url(${user.background.text})`,
+                display: "flex ",
+                margin: 0,
+                flexDirection: "column",
+                height: "100vh",
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+              }
         }
       >
         <div className="Header">
@@ -65,18 +89,24 @@ export function ViewCard() {
         <div className="Body">
           {user.links.map((item) => {
             return (
-              <a href={item.link} className="url">
+              <a href={item.link} className="url" key={item.icon}>
                 <div
                   className="social-platform-list"
                   style={{ border: "1px solid #41784f" }}
                 >
                   <div className="link">
                     <div className="icon">
-                      <DynamicFaIcon name = {`Fa${user.icon}`} themeColor = {user.themeColor}/>
+                      <DynamicFaIcon
+                        name={`Fa${item.icon}`}
+                        themeColor={user.themeColor}
+                      />
                     </div>
                     <div className="title">{item.content}</div>
                     <div className="icon">
-                      <DynamicFaIcon name = "FaFacebook" themeColor = {user.themeColor}/>
+                      <DynamicFaIcon
+                        name={`Fa${item.icon}`}
+                        themeColor={user.themeColor}
+                      />
                     </div>
                   </div>
                 </div>
@@ -84,7 +114,7 @@ export function ViewCard() {
             );
           })}
         </div>
-      </body>
+      </div>
     );
   }
 }

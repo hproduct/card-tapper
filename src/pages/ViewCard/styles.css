@@ -8,13 +8,6 @@
   --light: #eee;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-width: 100vh;
-}
-
 .Header {
   width: 100%;
   height: auto;
@@ -110,7 +103,7 @@ body {
 /* Mobile: width < 714px */
 @media only screen and (max-width: 44.625rem) {
   .Body {
-    width: 80%;
+    width: 70%;
     height: 100%;
   }
 }
