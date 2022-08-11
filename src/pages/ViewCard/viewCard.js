@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {} from "./styles.css";
-import DynamicFaIcon from "./DynamicFaIcon";
+import DynamicFaIcon from "../../../src/components/ui/DynamicFaIcon";
 import { Error } from "../Error/error";
-import { db } from "./firebase-config";
+import { db } from "../../../src/data/firebase-config";
 import { doc, getDoc } from "firebase/firestore";
 import { Loading } from "../Loading/loading";
 
