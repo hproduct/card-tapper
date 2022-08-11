@@ -62,15 +62,13 @@ export function ViewCard() {
                 backgroundColor: user.background.text,
                 display: "flex ",
                 flexDirection: "column",
-                height: "100vh",
+                minHeight: "100vh",
               }
             : {
                 backgroundImage: `url(${user.background.text})`,
                 display: "flex ",
-                margin: 0,
                 flexDirection: "column",
-                height: "100vh",
-                backgroundSize: 'cover',
+                minHeight: "100vh",
                 backgroundRepeat: 'no-repeat'
               }
         }
