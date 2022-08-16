@@ -5,9 +5,12 @@ import { Error } from "../Error/error";
 import { db } from "../../../src/data/firebase-config";
 import { doc, getDoc } from "firebase/firestore";
 import { Loading } from "../Loading/loading";
+import { useParams } from "react-router-dom";
 
 export function ViewCard() {
   const [loading, setLoading] = useState(false);
+  let params = useParams();
+  let userName = params.userName;
   const [error, setError] = useState(false);
   const [user, setUser] = useState({
     links: [],
@@ -21,8 +24,6 @@ export function ViewCard() {
     const getUserByID = async () => {
       setLoading(true);
       try {
-        const urlParams = new URLSearchParams(window.location.search);
-        let userName = urlParams.get("user");
         const docRef = doc(db, "users", userName);
         getDoc(docRef)
           .then((doc) => {
@@ -40,10 +41,12 @@ export function ViewCard() {
           .catch((err) => {
             setError(true);
             setLoading(false);
+            console.log(err);
           });
       } catch (e) {
         setError(true);
         setLoading(false);
+        console.log(e);
       }
     };
     getUserByID();
