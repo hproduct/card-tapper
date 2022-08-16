@@ -8,7 +8,7 @@ import { Error } from "./pages/Error/error";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/">
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/viewCard" element={<ViewCard />}>
