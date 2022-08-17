@@ -92,10 +92,10 @@ export function ViewCard() {
             return (
               <a href={item.link} className="url" key={item.icon}>
                 <div
+                  style= { {border: "1px solid " + user.themeColor}}
                   className="social-platform-list"
-                  style={{ border: "1px solid #41784f" }}
                 >
-                  <div className="link">
+                  <div className="link" style={ {color: user.themeColor}}>
                     <div className="icon">
                       <DynamicFaIcon
                         name={`Fa${item.icon}`}

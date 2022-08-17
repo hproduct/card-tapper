@@ -53,7 +53,6 @@
 }
 
 .social-platform-list {
-  border: 1px solid #41784f;
   padding: 1rem;
   border-radius: 2rem;
   margin-bottom: 1rem;
@@ -71,7 +70,6 @@
 .title {
   width: auto;
   height: 100%;
-  color: #41784f;
   font-weight: bold;
   display: inline-block;
   margin: 0 auto;
