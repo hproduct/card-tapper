@@ -8,6 +8,10 @@
   --light: #eee;
 }
 
+* {
+  font-family: BalooThambi2-Bold;
+}
+
 .Header {
   width: 100%;
   height: auto;
@@ -42,6 +46,7 @@
   font-size: medium;
   vertical-align: bottom;
   width: 100%;
+  white-space: pre-line;
 }
 
 .Avatar {

@@ -1,10 +1,12 @@
 import React from "react";
 import {} from "./styles.css";
 
-export function Error( {data} ) {
+export function Error( {error} ) {
     return (
         <div className="error">
-            <h1>Error</h1>
+            <div>Opps, something wrong!</div>
+            <div className="errorType">{error.type}</div>
+            <div className="errorContent">{error.content}</div>
         </div>
     )
 }

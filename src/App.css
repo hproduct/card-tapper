@@ -33,3 +33,20 @@ body {
   margin: 0;
   padding: 0;
 };
+
+@font-face {
+  font-family: 'BalooThambi2';
+  src: local('BalooThambi2'), url(./fonts/BalooThambi2/BalooThambi2-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'BalooThambi2-Bold';
+    font-weight: 900;
+    src: local('BalooThambi2'), url(./fonts/BalooThambi2/BalooThambi2-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'BalooThambi2-Medium';
+    font-weight: 900;
+    src: local('BalloThambi2'), url(./fonts/BalooThambi2/BalooThambi2-Medium.ttf) format('truetype');
+}

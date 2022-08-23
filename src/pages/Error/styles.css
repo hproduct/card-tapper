@@ -1,3 +1,5 @@
 .error {
-    color: green;
-}
+    color: gray;
+    align-items: center;
+    text-align: center;
+}    

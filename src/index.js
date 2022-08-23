@@ -14,7 +14,7 @@ root.render(
       <Route path="/viewCard" element={<ViewCard />}>
         <Route path=":userName" element={<ViewCard />} />
       </Route>
-      <Route path="*" element={<Error />}></Route>
+      <Route path="*" element={<Error error={{ type: "404", content: "Your page you looking for is not found! Please try again" }} />}></Route>
     </Routes>
   </BrowserRouter>
 );

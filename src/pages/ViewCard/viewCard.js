@@ -30,7 +30,7 @@ export function ViewCard() {
             const data = doc.data();
             setUser({
               links: [...data.Links],
-              description: data.description,
+              description: data.description.replace('\\n', '\n'),
               name: data.name,
               themeColor: data.themeColor,
               avatar: data.avatar,
@@ -62,18 +62,19 @@ export function ViewCard() {
         style={
           user.background.type === "Color"
             ? {
-                backgroundColor: user.background.text,
-                display: "flex ",
-                flexDirection: "column",
-                minHeight: "100vh",
-              }
+              backgroundColor: user.background.text,
+              display: "flex ",
+              flexDirection: "column",
+              minHeight: "100vh",
+            }
             : {
-                backgroundImage: `url(${user.background.text})`,
-                display: "flex ",
-                flexDirection: "column",
-                minHeight: "100vh",
-                backgroundRepeat: 'no-repeat'
-              }
+              backgroundImage: `url(${user.background.text})`,
+              display: "flex ",
+              flexDirection: "column",
+              minHeight: "100vh",
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+            }
         }
       >
         <div className="Header">
@@ -83,7 +84,7 @@ export function ViewCard() {
           <div className="Name" style={{ color: user.themeColor }}>
             <p>{user.name}</p>
           </div>
-          <div className="Biography" style={{ color: user.themeColor }}>
+          <div className="Biography" style={{ color: user.themeColor, whiteSpace: "pre-wrap" }}>
             <h3>{user.description}</h3>
           </div>
         </div>
