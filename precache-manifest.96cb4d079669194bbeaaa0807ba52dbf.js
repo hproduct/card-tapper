@@ -20,16 +20,16 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.87f1668e.js"
   },
   {
-    "revision": "a050fa417cbddbcffcf220cb1ccabc28",
-    "url": "/static/media/BalooThambi2-Medium.a050fa41.ttf"
-  },
-  {
     "revision": "ee8debc9629130e595cf93a79012e780",
     "url": "/static/media/BalooThambi2-Regular.ee8debc9.ttf"
   },
   {
     "revision": "c9951e0df82592ac10b3f8cd09998621",
     "url": "/static/media/BalooThambi2-Bold.c9951e0d.ttf"
+  },
+  {
+    "revision": "a050fa417cbddbcffcf220cb1ccabc28",
+    "url": "/static/media/BalooThambi2-Medium.a050fa41.ttf"
   },
   {
     "revision": "2f0a0a014b8655854ad002c05a034030",
