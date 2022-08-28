@@ -79,7 +79,7 @@ export function ViewCard() {
       >
         <div className="Header">
           <div className="Avatar">
-            <img src={user.avatar} className="Image" alt="" />
+            <img src={user.avatar} className="Image" alt="" style={{ borderRadius: "50%" }} />
           </div>
           <div className="Name" style={{ color: user.themeColor }}>
             <p>{user.name}</p>
@@ -93,10 +93,10 @@ export function ViewCard() {
             return (
               <a href={item.link} className="url" key={item.icon}>
                 <div
-                  style= { {border: "1px solid " + user.themeColor}}
+                  style={{ border: "1px solid " + user.themeColor }}
                   className="social-platform-list"
                 >
-                  <div className="link" style={ {color: user.themeColor}}>
+                  <div className="link" style={{ color: user.themeColor }}>
                     <div className="icon">
                       <DynamicFaIcon
                         name={`Fa${item.icon}`}
