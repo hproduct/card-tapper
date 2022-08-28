@@ -1,16 +1,16 @@
 {
   "main.css": "/static/css/main.d35bbdbc.chunk.css",
-  "main.js": "/static/js/main.a24587f1.chunk.js",
-  "main.js.map": "/static/js/main.a24587f1.chunk.js.map",
+  "main.js": "/static/js/main.a6cc24ae.chunk.js",
+  "main.js.map": "/static/js/main.a6cc24ae.chunk.js.map",
   "static/js/1.75aa2d86.chunk.js": "/static/js/1.75aa2d86.chunk.js",
   "static/js/1.75aa2d86.chunk.js.map": "/static/js/1.75aa2d86.chunk.js.map",
   "static/js/2.ff8fe81a.chunk.js": "/static/js/2.ff8fe81a.chunk.js",
   "static/js/2.ff8fe81a.chunk.js.map": "/static/js/2.ff8fe81a.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.87f1668e.js",
   "runtime~main.js.map": "/static/js/runtime~main.87f1668e.js.map",
-  "static/media/App.css": "/static/media/BalooThambi2-Medium.a050fa41.ttf",
+  "static/media/App.css": "/static/media/BalooThambi2-Bold.c9951e0d.ttf",
   "static/css/main.d35bbdbc.chunk.css.map": "/static/css/main.d35bbdbc.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.1c5feb840fe9c52d63d1a498803fa92c.js": "/precache-manifest.1c5feb840fe9c52d63d1a498803fa92c.js",
+  "precache-manifest.807246f157faa8243c2083f63e867e78.js": "/precache-manifest.807246f157faa8243c2083f63e867e78.js",
   "service-worker.js": "/service-worker.js"
 }
