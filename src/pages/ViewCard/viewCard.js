@@ -30,7 +30,7 @@ export function ViewCard() {
             const data = doc.data();
             setUser({
               links: [...data.Links],
-              description: data.description.replace('\\n', '\n'),
+              description: data.description.replace("\\n", "\n"),
               name: data.name,
               themeColor: data.themeColor,
               avatar: data.avatar,
@@ -62,58 +62,93 @@ export function ViewCard() {
         style={
           user.background.type === "Color"
             ? {
-              backgroundColor: user.background.text,
-              display: "flex ",
-              flexDirection: "column",
-              minHeight: "100vh",
-            }
+                backgroundColor: user.background.text,
+                display: "flex ",
+                flexDirection: "column",
+                minHeight: "100vh",
+              }
             : {
-              backgroundImage: `url(${user.background.text})`,
-              display: "flex ",
-              flexDirection: "column",
-              minHeight: "100vh",
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-            }
+                backgroundImage: `url(${user.background.text})`,
+                display: "flex ",
+                flexDirection: "column",
+                minHeight: "100vh",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }
         }
       >
         <div className="Header">
           <div className="Avatar">
-            <img src={user.avatar} className="Image" alt="" style={{ borderRadius: "50%" }} />
+            <img
+              src={user.avatar}
+              className="Image"
+              alt=""
+              style={{ borderRadius: "50%" }}
+            />
           </div>
           <div className="Name" style={{ color: user.themeColor }}>
             <p>{user.name}</p>
           </div>
-          <div className="Biography" style={{ color: user.themeColor, whiteSpace: "pre-wrap" }}>
+          <div
+            className="Biography"
+            style={{ color: user.themeColor, whiteSpace: "pre-wrap" }}
+          >
             <h3>{user.description}</h3>
           </div>
         </div>
         <div className="Body">
           {user.links.map((item) => {
-            return (
-              <a href={item.link} className="url" key={item.icon}>
-                <div
-                  style={{ border: "1px solid " + user.themeColor }}
-                  className="social-platform-list"
-                >
-                  <div className="link" style={{ color: user.themeColor }}>
-                    <div className="icon">
-                      <DynamicFaIcon
-                        name={`Fa${item.icon}`}
-                        themeColor={user.themeColor}
-                      />
-                    </div>
-                    <div className="title">{item.content}</div>
-                    <div className="icon">
-                      <DynamicFaIcon
-                        name={`Fa${item.icon}`}
-                        themeColor={user.themeColor}
-                      />
+            if (item.link === "#") {
+              return (
+                <div className="url" key={item.icon}>
+                  <div
+                    style={{ border: "1px solid " + user.themeColor }}
+                    className="social-platform-list"
+                  >
+                    <div className="link" style={{ color: user.themeColor }}>
+                      <div className="icon">
+                        <DynamicFaIcon
+                          name={`Fa${item.icon}`}
+                          themeColor={user.themeColor}
+                        />
+                      </div>
+                      <div className="title">{item.content}</div>
+                      <div className="icon">
+                        <DynamicFaIcon
+                          name={`Fa${item.icon}`}
+                          themeColor={user.themeColor}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </a>
-            );
+              );
+            } else {
+              return (
+                <a href={item.link} className="url" key={item.icon}>
+                  <div
+                    style={{ border: "1px solid " + user.themeColor }}
+                    className="social-platform-list"
+                  >
+                    <div className="link" style={{ color: user.themeColor }}>
+                      <div className="icon">
+                        <DynamicFaIcon
+                          name={`Fa${item.icon}`}
+                          themeColor={user.themeColor}
+                        />
+                      </div>
+                      <div className="title">{item.content}</div>
+                      <div className="icon">
+                        <DynamicFaIcon
+                          name={`Fa${item.icon}`}
+                          themeColor={user.themeColor}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              );
+            }
           })}
         </div>
       </div>

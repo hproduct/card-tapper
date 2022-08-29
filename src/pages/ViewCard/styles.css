@@ -78,6 +78,7 @@
   font-weight: bold;
   display: inline-block;
   margin: 0 auto;
+  word-break: break-all;
 }
 
 .url {
@@ -99,8 +100,8 @@
   justify-content: center;
 }
 
-::-webkit-scrollbar{
-  width: 25px ;
+::-webkit-scrollbar {
+  width: 25px;
 }
 
 /* Mobile: width < 714px */
