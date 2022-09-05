@@ -30,7 +30,7 @@ export function ViewCard() {
             const data = doc.data();
             setUser({
               links: [...data.Links],
-              description: data.description.replace("\\n", "\n"),
+              description: data.description.replaceAll("\\n", "\n"),
               name: data.name,
               themeColor: data.themeColor,
               avatar: data.avatar,
